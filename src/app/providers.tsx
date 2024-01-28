@@ -6,7 +6,6 @@ export function Providers({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <ThemeProvider defaultTheme="mocha" enableSystem={false} attribute="class">
       {children}

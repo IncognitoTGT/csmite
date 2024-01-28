@@ -11,7 +11,9 @@ export default function Home() {
           Cryptosmite
         </h1>
         <ul className="nav">
-          <li className="hover:underline"><Link href="/">Home</Link></li>
+          <li className="hover:underline">
+            <Link href="/">Home</Link>
+          </li>
           <li className="hover:underline">
             <Link href="/writeup">The Writeup</Link>
           </li>
@@ -25,9 +27,14 @@ export default function Home() {
         Download Images
       </div>
       <div className="flex text-lg text-text font-sans justify-center items-center w-[1000px] flex-col mx-auto mt-6 mx-1/2">
-        Here, you will find the Cryptosmite images for your Chromebook. These images are the name of your BOARD, not the codename of your device.
+        Here, you will find the Cryptosmite images for your Chromebook. These
+        images are the name of your BOARD, not the codename of your device.
         <br />
-        <input type="text" className="border-2 border-mauve rounded-md p-2 mt-2 bg-surface0 focus:outline-none" placeholder="Search for your board" />
+        <input
+          type="text"
+          className="border-2 border-mauve rounded-md p-2 mt-2 bg-surface0 focus:outline-none"
+          placeholder="Search for your board"
+        />
       </div>
     </main>
   );

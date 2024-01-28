@@ -26,7 +26,7 @@ export default function Home() {
       </div>
       <p className="flex text-lg text-text font-sans justify-center items-center mt-6 mx-1/2">
         {/* Insert writeup here */}
-        Writeup is pasted here, please replace 
+        Writeup is pasted here, please replace
       </p>
     </main>
   );
