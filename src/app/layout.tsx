@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Cryptosmite",
-  description: "uwu",
+  description: "uwtestu",
 };
 
 export default function RootLayout({
