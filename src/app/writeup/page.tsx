@@ -16,7 +16,7 @@ export default function Home() {
           </li>
           <li className="underline text-text">The Writeup</li>
           <li className="hover:underline">
-            <Link href="/tutorial">Smiting</Link>
+            <Link href="/smiting">Smiting</Link>
           </li>
         </ul>
       </nav>
@@ -24,8 +24,9 @@ export default function Home() {
       <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center mt-6 mx-1/2">
         The way Cryptosmite works
       </div>
-      <p className="flex text-2xl text-text font-sans justify-center items-center mt-6 mx-1/2">
+      <p className="flex text-lg text-text font-sans justify-center items-center mt-6 mx-1/2">
         {/* Insert writeup here */}
+        Writeup is pasted here, please replace 
       </p>
     </main>
   );

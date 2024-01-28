@@ -1,16 +1,13 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
-interface ThemeSwitchProps {
-  className: string;
-}
+
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   function toUpperCase(str: string): string {
     return str?.charAt(0).toUpperCase() + str?.slice(1);
   }
-  // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -22,7 +19,7 @@ const ThemeSwitch = () => {
   return (
     <button
       value={theme}
-      className="fixed right-5 bottom-5 bg-mantle font-sans text-md p-2 rounded h-30 text-text outline-none flex items-center"
+      className="fixed right-5 bottom-5 bg-mantle font-sans text-md p-3 rounded h-30 text-text outline-none  flex items-center"
       onClick={(e) => {
         if (e.currentTarget.value.includes("ocha")) {
           setTheme("macchiato");
@@ -43,10 +40,10 @@ const ThemeSwitch = () => {
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        className="lucide lucide-palette"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="lucide lucide-palette space-x-2"
       >
         <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
         <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
