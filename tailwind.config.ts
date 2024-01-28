@@ -9,13 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-geist-sans)'],
-        mono: ['var(--font-geist-mono)'],
-      }
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
+      },
     },
   },
-  plugins: [require("@catppuccin/tailwindcss")({
-    prefix: false
-  })],
+  plugins: [
+    require("@catppuccin/tailwindcss")({
+      prefix: false,
+    }),
+  ],
 };
 export default config;
