@@ -10,7 +10,7 @@ export default function Home() {
         <h1 className="text-6xl font-bold font-mono text-text mt-6">
           Cryptosmite
         </h1>
-        <ul className="flex list-none mt-6 text-blue text-3xl font-sans font-extrabold right-1 flex-row space-x-5">
+        <ul className="nav">
           <li className="hover:underline">
             <Link href="/">Home</Link>
           </li>
