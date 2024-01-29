@@ -7,7 +7,7 @@ export default function SmiteTwo() {
     <>
       <NavBar />
       <main
-        className={`min-h-screen flex-col justify-between p-5 mx-auto overflow-y-auto bg-base`}
+        className={`min-h-screen flex-col justify-between p-5 mx-auto  bg-base`}
       >
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           Step 2 - Download your image

@@ -4,13 +4,11 @@ export default function NotFound() {
   return (
     <>
       <NavBar />
-      <main className="min-h-screen p-5 mx-auto bg-base overflow-y-auto flex flex-col justify-center items-center">
-        <div className="flex text-5xl text-mauve font-bold font-mono justify-center items-center">
+      <main className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+        <div className="text-5xl text-red font-bold font-mono text-center">
           404
         </div>
-        <p className="flex text-2xl text-text font-sans justify-center items-center mt-6">
-          Page not found
-        </p>
+        <p className="text-2xl text-text font-sans mt-6">Page not found</p>
       </main>
     </>
   );

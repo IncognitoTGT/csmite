@@ -4,7 +4,7 @@ export default function Home() {
     <>
       <NavBar />
       <main
-        className={`min-h-screen flex-col justify-between p-5 mx-auto overflow-y-auto bg-base`}
+        className={`min-h-screen flex-col justify-between p-5 mx-auto  bg-base`}
       >
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           The way Cryptosmite works
