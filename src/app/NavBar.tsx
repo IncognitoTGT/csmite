@@ -1,5 +1,6 @@
 import ThemeSwitch from "./themeSwitch";
 import Link from "next/link";
+import { Home, NotebookPen, Strikethrough, Download } from "lucide-react";
 export default function NavBar() {
   return (
     <>
@@ -8,18 +9,22 @@ export default function NavBar() {
         <div className="left-1 font-mono font-bold text-text text-4xl">
           Cryptosmite
         </div>
-        <div className="flex flex-row flex-grow justify-end text-blue font-sans font-medium translate-y-2 text-xl -mr-2">
+        <div className="flex flex-row flex-grow justify-end items-center text-blue font-sans font-medium translate-y-2 text-xl -mr-2">
           <Link href="/" className="mx-4 hover:text-mauve">
-            Home
+            <Home className="h-5 w-5 mr-2 inline" />
+            <span className="inline">Home</span>
           </Link>
           <Link href="/writeup" className="mx-4 hover:text-mauve">
-            The Writeup
+            <NotebookPen className="h-5 w-5 mr-2 inline" />
+            <span className="inline">The Writeup</span>
           </Link>
           <Link href="/smiting" className="mx-4 hover:text-mauve">
-            Smiting
+            <Strikethrough className="h-5 w-5 mr-2 inline" />
+            <span className="inline">Smiting</span>
           </Link>
           <Link href="/download" className="mx-4 hover:text-mauve">
-            Download
+            <Download className="h-5 w-5 mr-2 inline" />
+            <span className="inline">Download</span>
           </Link>
         </div>
       </nav>
