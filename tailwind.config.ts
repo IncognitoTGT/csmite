@@ -18,7 +18,6 @@ const config: Config = {
     require("@catppuccin/tailwindcss")({
       prefix: false,
     }),
-    require("tailwind-scrollbar")({ nocompatible: true }),
   ],
 };
 export default config;

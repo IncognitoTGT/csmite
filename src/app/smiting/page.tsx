@@ -16,7 +16,7 @@ export default function SmiteOne() {
           <div className="flex-col">Placeholder - replace</div>
         </div>
         <footer className="flex flex-row font-sans justify-center text-2xl text-mauve items-center bottom-5">
-          <Link href="/smiting/step1" className="hover:underline">
+          <Link href="/smiting/step2" className="hover:underline">
             Next
           </Link>
           <ChevronRight className="h-10 w-10" />

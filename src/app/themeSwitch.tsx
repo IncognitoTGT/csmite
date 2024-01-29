@@ -18,20 +18,20 @@ const ThemeSwitch = () => {
   }
 
   return (
+
     <button
       value={theme}
-      className="fixed right-5 bottom-5 bg-mantle font-sans text-md p-3 rounded h-30 text-text outline-none  flex items-center"
+      className="fixed right-5 bottom-5 bg-mantle hover:bg-crust  font-sans p-3 rounded-md justify-center h-30 text-text outline-none  flex items-center"
       onClick={(e) => {
-        if (e.currentTarget.value.includes("ocha")) {
+        if (e.currentTarget.value === "mocha") {
           setTheme("macchiato");
-        } else if (e.currentTarget.value.includes("acchiato")) {
+        } else if (e.currentTarget.value === "macchiato") {
           setTheme("frappe");
-        } else if (e.currentTarget.value.includes("rappe")) {
+        } else if (e.currentTarget.value === "frappe") {
           setTheme("latte");
-        } else if (e.currentTarget.value.includes("atte")) {
+        } else if (e.currentTarget.value === "latte") {
           setTheme("mocha");
         }
-        window.location.reload();
       }}
     >
       <Palette className="h-5 w-5 mr-2" />

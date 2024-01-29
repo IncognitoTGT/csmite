@@ -40,7 +40,7 @@ export default function Download() {
   useEffect(() => {
     setFilteredBoards(
       boards.filter((board) =>
-        board.toLowerCase().includes(searchTerm.toLowerCase()),
+        board.toLowerCase().startsWith(searchTerm.toLowerCase()),
       ),
     );
   }, [searchTerm, boards]);
@@ -58,7 +58,7 @@ export default function Download() {
           <br />
           <input
             type="text"
-            className="border-none focus:ring-4 ring-overlay2 ring-offset-4 ring-offset-base rounded-lg w-35 p-2 mt-2 bg-surface0 focus:outline-none mb-5"
+            className="border-none focus:ring-4 ring-overlay2 ring-offset-4 caret-rosewater ring-offset-base rounded-lg w-96 text-center p-2 mt-2 bg-surface0 focus:outline-none mb-5"
             placeholder="Search for your board"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
