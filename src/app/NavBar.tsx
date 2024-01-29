@@ -8,7 +8,7 @@ export default function NavBar() {
         <div className="left-1 font-mono font-bold text-text text-4xl">
           Cryptosmite
         </div>
-        <div className="flex flex-row flex-grow justify-end text-blue font-sans font-medium translate-y-2 text-xl">
+        <div className="flex flex-row flex-grow justify-end text-blue font-sans font-medium translate-y-2 text-xl -mr-2">
           <Link href="/" className="mx-4 hover:text-sky">
             Home
           </Link>

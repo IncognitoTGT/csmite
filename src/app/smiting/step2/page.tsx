@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import NavBar from "@/app/NavBar";
-export default function Download() {
+export default function SmiteTwo() {
   return (
     <>
       <NavBar />

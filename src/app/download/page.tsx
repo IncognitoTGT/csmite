@@ -2,7 +2,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { Disc } from "lucide-react";
 import NavBar from "../NavBar";
-export default function Home() {
+export default function Download() {
   const boards = useMemo(
     () => [
       "ambassador",
@@ -47,16 +47,14 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main
-        className={`min-h-screen flex-col justify-between p-5 mx-auto overflow-y-auto bg-base`}
-      >
+      <main className="min-h-screen flex-col justify-between p-5 mx-auto overflow-y-auto bg-base">
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center mt-6 mx-1/2">
           Download Images
         </div>
         <div className="flex text-lg text-text font-sans justify-center items-center w-[1000px] flex-col mx-auto mt-6 mx-1/2">
           Here, you will find the Cryptosmite images for your Chromebook. These
-          images are specific to your Chromebook&apos;s board, not your device
-          specifically.
+          images are specific to your Chromebook&apos;s board, not just your
+          device.
           <br />
           <input
             type="text"

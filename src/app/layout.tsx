@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body
+        className={`${GeistSans.variable} ${GeistMono.variable} scrollbar-thin scrollbar-track-base hover:scrollbar-thumb-surface1 scrollbar-thumb-surface0 scrollbar-rounded scrollbar-thumb-rounded-full`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
