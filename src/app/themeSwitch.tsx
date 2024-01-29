@@ -18,7 +18,6 @@ const ThemeSwitch = () => {
   }
 
   return (
-
     <button
       value={theme}
       className="fixed right-5 bottom-5 bg-mantle hover:bg-crust  font-sans p-3 rounded-md justify-center h-30 text-text outline-none  flex items-center"

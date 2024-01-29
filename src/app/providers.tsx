@@ -7,7 +7,12 @@ export function Providers({
   children: React.ReactNode;
 }>) {
   return (
-    <ThemeProvider defaultTheme="mocha" themes={["mocha", "macchiato","frappe","latte"]} enableSystem={false} attribute="class">
+    <ThemeProvider
+      defaultTheme="mocha"
+      themes={["mocha", "macchiato", "frappe", "latte"]}
+      enableSystem={false}
+      attribute="class"
+    >
       {children}
     </ThemeProvider>
   );
