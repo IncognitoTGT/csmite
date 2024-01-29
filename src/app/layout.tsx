@@ -3,6 +3,7 @@ import { Providers } from "./providers";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
+import ThemeSwitch from "@/app/themeSwitch";
 
 export const metadata: Metadata = {
   title: "Cryptosmite",
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
+        <ThemeSwitch />
         <Providers>{children}</Providers>
       </body>
     </html>
