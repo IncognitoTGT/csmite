@@ -31,8 +31,8 @@ export default function Download() {
           &nbsp;First, you need to get your Chromebook&apos;s board number. Note
           that this is NOT the codename of your device. To find your board, go
           to chrome://version, and next to &quot;Platform&quot;, in the end of
-          that line, you should see a funny name. After you got your board name,
-          go to the&nbsp;
+          that line, you should see your board name. After you got your board
+          name, go to the&nbsp;
           <Link className="text-blue hover:underline" href="/download">
             Downloads
           </Link>{" "}
@@ -45,9 +45,9 @@ export default function Download() {
           />
         </div>
       </div>
-      <footer className="flex flex-row font-sans justify-center text-2xl text-mauve items-center text-mono bottom-2">
+      <footer className="flex flex-row font-sans justify-center text-2xl text-mauve items-center bottom-5">
         <ChevronLeft className="h-10 w-10" />
-        <Link href="/smiting/step1" className="hover:underline">
+        <Link href="/smiting" className="hover:underline">
           Previous
         </Link>
         <div className="mx-5">|</div>
