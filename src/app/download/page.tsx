@@ -76,22 +76,21 @@ export default function Home() {
         <br />
         <input
           type="text"
-          className="border-4 border-mantle rounded-lg w-35 p-2 mt-2 bg-surface0 focus:outline-none mb-5"
+          className="border-none focus:ring-4 ring-overlay2 ring-offset-4 ring-offset-base rounded-lg w-35 p-2 mt-2 bg-surface0 focus:outline-none mb-5"
           placeholder="Search for your board"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <p className="flex justify-center items-center font-sans font-medium text-text text-2xl list-none mb-2">
-          Images
-        </p>
-        <table className="table-auto w-full text-left rounded-sm">
+        <table className="table-auto w-full text-left border-collapse">
           <tbody>
             {filteredBoards.map((board) => (
               <tr key={board}>
-                <td className="px-4 py-2 bg-mantle">
+                <td
+                  className={`px-4 py-2 bg-mantle hover:bg-crust ${filteredBoards.indexOf(board) === 0 && "rounded-t-lg"} ${filteredBoards.indexOf(board) === filteredBoards.length - 1 && "rounded-b-lg"}`}
+                >
                   <a
                     href={`/bin/${board}.bin`}
-                    className="text-subtext0 hover:text-subtext1 flex items-center"
+                    className="text-subtext0 hover:text-subtext1 outline-none border-none focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-base flex items-center"
                   >
                     <Disc className="h-5 w-5 mr-2" />
                     {board}
