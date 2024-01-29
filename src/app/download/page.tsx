@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
-import { Disc } from "lucide-react";
+import { Disc2 } from "lucide-react";
 import NavBar from "../NavBar";
 export default function Download() {
   const boards = useMemo(
@@ -74,7 +74,7 @@ export default function Download() {
                       href={`/bin/${board}.bin`}
                       className="text-subtext0 hover:text-subtext1 outline-none border-none focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-base flex items-center"
                     >
-                      <Disc className="h-5 w-5 mr-2" />
+                      <Disc2 className="h-5 w-5 mr-2" />
                       {board}
                     </a>
                   </td>
