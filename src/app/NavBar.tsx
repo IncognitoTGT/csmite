@@ -12,19 +12,19 @@ export default function NavBar() {
         <div className="flex flex-row flex-grow justify-end items-center text-blue font-sans font-medium translate-y-2 text-xl -mr-2">
           <Link href="/" className="mx-4 hover:text-mauve">
             <Home className="h-5 w-5 mr-2 inline" />
-            <span className="inline">Home</span>
+            Home
           </Link>
           <Link href="/writeup" className="mx-4 hover:text-mauve">
             <NotebookPen className="h-5 w-5 mr-2 inline" />
-            <span className="inline">The Writeup</span>
+            The Writeup
           </Link>
           <Link href="/smiting" className="mx-4 hover:text-mauve">
             <Strikethrough className="h-5 w-5 mr-2 inline" />
-            <span className="inline">Smiting</span>
+            Smiting
           </Link>
           <Link href="/download" className="mx-4 hover:text-mauve">
             <Download className="h-5 w-5 mr-2 inline" />
-            <span className="inline">Download</span>
+            Download
           </Link>
         </div>
       </nav>
