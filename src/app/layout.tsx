@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
-        <ThemeSwitch />
         <Providers>{children}</Providers>
       </body>
     </html>
