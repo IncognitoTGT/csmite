@@ -48,10 +48,10 @@ export default function Download() {
     <>
       <NavBar />
       <main className="min-h-screen flex-col justify-between p-5 mx-auto overflow-y-auto bg-base">
-        <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center mx-1/2">
+        <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           Download Images
         </div>
-        <div className="flex text-lg text-text font-sans justify-center items-center w-[1000px] flex-col mx-auto mt-6 mx-1/2">
+        <div className="flex text-lg text-text font-sans justify-center items-center w-[1000px] flex-col mx-auto mt-6 ">
           Here, you will find the Cryptosmite images for your Chromebook. These
           images are specific to your Chromebook&apos;s board, not just your
           device.

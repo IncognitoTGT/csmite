@@ -9,7 +9,7 @@ export default function SmiteTwo() {
       <main
         className={`min-h-screen flex-col justify-between p-5 mx-auto overflow-y-auto bg-base`}
       >
-        <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center mx-1/2">
+        <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           Step 2 - Download your image
         </div>
         <div className="flex text-lg text-text font-sans leading-relaxed justify-center w-[1000px] items-center mt-6 pb-5 mx-auto">
