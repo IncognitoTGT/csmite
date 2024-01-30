@@ -49,9 +49,7 @@ export default function Home() {
               <li>You can still have devmode blocked and be unenrolled.</li>
             </ul>
             If you have any questions about caub or this new unenrollment
-            exploit, please dm me or catakang. <br /> Credits: I have pioneered
-            the exploit, and Catakang, kxtz, Fallenmoon8080, Melitha, and Jimmy,
-            have all tested the exploit. The site was made by tg.t.
+            exploit, please dm me or catakang.
             <br />
             This has been tested on dedede, octopus, and grunt, so it should
             work on latest firmware (even on v120, however unenrollment
@@ -69,6 +67,13 @@ export default function Home() {
                 account.
               </li>
             </ul>
+            <div className="text-2xl font-sans font-bold text-mauve">
+              Credits
+            </div>
+            I (MunyDev) have pioneered the exploit, and Catakang, kxtz,
+            Fallenmoon8080, Melitha, and Jimmy, have all tested the exploit.
+            <br />
+            The frontend website code was written by tg.t and kxtz.
           </div>
         </div>
       </main>
