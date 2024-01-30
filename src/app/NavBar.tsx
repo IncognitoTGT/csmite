@@ -9,7 +9,7 @@ export default function NavBar() {
         <div className="left-1 font-mono font-bold text-text text-4xl">
           Cryptosmite
         </div>
-        <div className="flex flex-row flex-grow justify-end items-center text-blue font-sans font-medium translate-y-2 text-xl -mr-2">
+        <div className="flex flex-row flex-grow justify-end items-center text-blue font-sans font-medium text-xl -mr-2">
           <Link href="/" scroll={false} className="mx-4 hover:text-mauve">
             <Home className="h-5 w-5 mr-2 inline" />
             Home
