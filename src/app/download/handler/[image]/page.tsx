@@ -1,4 +1,11 @@
 import NavBar from "@/app/NavBar";
+import Flag from "./flag";
+
+// Mirrors
+// ALL MIRROR LINKS MUST END WITH A `/`
+const mirror1: string = 'https://dl.example.com/'; // both are on the correct geolocation, links will not be included until final release.
+const mirror2: string = 'https://dl.test.com/';
+
 export default function Handler({ params }: { params: { image: string } }) {
   return (
     <>
@@ -15,9 +22,17 @@ export default function Handler({ params }: { params: { image: string } }) {
             <div className="text-xl font-semibold mt-5">
               <a
                 className="text-blue hover:text-mauve"
-                href={"https://mirror1/bin/" + params.image}
+                href={mirror1 + params.image}
               >
-                Mirror 1
+                <Flag name="US" /> FWSmasher US Mirror
+              </a>
+            </div>
+            <div className="text-xl font-semibold mt-5">
+              <a
+                className="text-blue hover:text-mauve"
+                href={mirror1 + params.image}
+              >
+                <Flag name="DE" /> FWSmasher DE Mirror
               </a>
             </div>
           </div>
