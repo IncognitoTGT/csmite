@@ -61,7 +61,7 @@ export default function Download() {
           <div className="flex flex-auto">
             <input
               type="text"
-              className="mx-20 border-none focus:ring-4 ring-overlay2 ring-offset-4 caret-rosewater ring-offset-base rounded-lg w-96 text-center p-2 mt-2 bg-surface0 focus:outline-none mb-5"
+              className="mx-20 border-none focus:ring-4 ring-overlay2 ring-offset-4 caret-rosewater ring-offset-base rounded-lg w-96 text-center p-2 mt-2 bg-mantle focus:outline-none mb-5"
               placeholder="Search for your board"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -72,7 +72,7 @@ export default function Download() {
               {filteredBoards.map((board) => (
                 <tr key={board}>
                   <td
-                    className={`px-4 py-2 bg-mantle hover:bg-crust ${filteredBoards.indexOf(board) === 0 && "rounded-t-lg"} ${filteredBoards.indexOf(board) === filteredBoards.length - 1 && "rounded-b-lg"}`}
+                    className={`px-4 py-2 bg-surface0 hover:bg-surface1 ${filteredBoards.indexOf(board) === 0 && "rounded-t-lg"} ${filteredBoards.indexOf(board) === filteredBoards.length - 1 && "rounded-b-lg"}`}
                   >
                     <Link
                       // file path - pls fix when ready for release.
