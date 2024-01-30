@@ -6,6 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Cryptosmite",
+  other: { "darkreader-lock": "idk what to put here (nextjs moment)" },
 };
 
 export default function RootLayout({
