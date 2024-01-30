@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
-import { Disc2, ChevronDownIcon } from "lucide-react";
-// jeez its slow
+import Link from "next/link";
+import { Disc2 } from "lucide-react";
 import NavBar from "../NavBar";
 export default function Download() {
   const boards = useMemo(
@@ -37,7 +37,6 @@ export default function Download() {
     [],
   );
   const [searchTerm, setSearchTerm] = useState("");
-  const [mirrorUrl, setMirrorUrl] = useState("");
   const [filteredBoards, setFilteredBoards] = useState(boards);
   useEffect(() => {
     setFilteredBoards(
@@ -67,26 +66,6 @@ export default function Download() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            {/* todo: mirrorlist dropdown box*/}
-            <div className="relative inline-block flex-row">
-              <select
-                defaultValue={mirrorUrl}
-                value={mirrorUrl}
-                onChange={(e) => setMirrorUrl(e.target.value)}
-                className="mx-20 appearance-none border-none focus:ring-4 ring-overlay2 ring-offset-4 ring-offset-base rounded-lg w-96 text-center p-2 mt-2 bg-surface0 focus:outline-none mb-5"
-              >
-                <option value="https://dl.example.com/">
-                  https://dl.example.com/
-                </option>
-                <option value="https://dl.example.com/">
-                  https://dl.example.com/
-                </option>
-                <option value="https://dl.example.com/">
-                  https://dl.example.com/
-                </option>
-              </select>
-              <ChevronDownIcon className="text-subtext0 absolute top-1/2 right-3 transform -translate-y-1/2 pointer-events-none"  />
-            </div>
           </div>
           <table className="table-auto w-full text-left border-collapse">
             <tbody>
@@ -95,14 +74,14 @@ export default function Download() {
                   <td
                     className={`px-4 py-2 bg-mantle hover:bg-crust ${filteredBoards.indexOf(board) === 0 && "rounded-t-lg"} ${filteredBoards.indexOf(board) === filteredBoards.length - 1 && "rounded-b-lg"}`}
                   >
-                    <a
+                    <Link
                       // file path - pls fix when ready for release.
-                      href={mirrorUrl + board}
+                      href={"/download/handler/" + board}
                       className="text-subtext0 hover:text-subtext1 outline-none border-none focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-base flex items-center"
                     >
                       <Disc2 className="h-5 w-5 mr-2" />
                       {board}
-                    </a>
+                    </Link>
                   </td>
                 </tr>
               ))}
