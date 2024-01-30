@@ -15,11 +15,9 @@ export default function Home() {
             Google Security Chip updates, and chrome updates) but we (FWSmasher)
             have found a way past that. Unfortunately however, the patch will
             arrive in v120.
-            <br />
-            <div className="text-2xl font-bold mt-5">
+            <div className="text-xl font-bold mt-5">
               AT ALL COSTS, avoid updating to 120 and caub.
             </div>
-            <br />
             If you want to unenroll at a later date, and are above v120, you
             won&apos;t be able to. Here are some ways to prepare for this new
             unenrollment method:{" "}
@@ -58,7 +56,7 @@ export default function Home() {
             This has been tested on dedede, octopus, and grunt, so it should
             work on latest firmware (even on v120, however unenrollment
             shouldn&nbsp;t work)
-            <div className="text-xl font-sans font-bold text-mauve">
+            <div className="text-2xl font-sans font-bold text-mauve">
               More info
             </div>
             <ul className="list-none list-inside">
