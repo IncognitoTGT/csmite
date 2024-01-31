@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${GeistSans.variable} ${GeistMono.variable} bg-base selection:bg-surface2/60`}
+        className={`${GeistSans.variable} ${GeistMono.variable} bg-base selection:bg-surface2/60 overflow-scroll`}
       >
         <Providers>{children}</Providers>
       </body>

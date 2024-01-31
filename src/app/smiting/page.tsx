@@ -6,9 +6,7 @@ export default function SmiteOne() {
   return (
     <>
       <NavBar />
-      <main
-        className={`min-h-screen flex-col justify-between p-5 mx-auto  bg-base`}
-      >
+      <main className={`flex-col justify-between p-5 mx-auto  bg-base`}>
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           Step 1 - Find your board name
         </div>
@@ -18,11 +16,16 @@ export default function SmiteOne() {
             Note that this is NOT the codename of your device. To find your
             board, go to chrome://version, and next to &quot;Platform&quot;, in
             the end of that line, you should see your board name. After you got
-            your board name, go to Step 2.
+            your board name,{" "}
+            <Link href="/download" className="text-blue hover:text-mauve">
+              download
+            </Link>{" "}
+            the image for your board, and proceed to the next step.
             <Image
               src="/images/boardname.png"
               width={1000}
               height={500}
+              className="mt-2"
               alt="Board name"
             />
           </div>
