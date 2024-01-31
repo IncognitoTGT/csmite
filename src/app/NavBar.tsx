@@ -10,31 +10,19 @@ export default function NavBar() {
           Cryptosmite
         </div>
         <div className="flex flex-row flex-grow justify-end items-center text-blue font-sans font-medium text-xl -mr-2">
-          <Link href="/" scroll={false} className="mx-4 hover:text-mauve">
+          <Link href="/" className="mx-4 hover:text-mauve">
             <Home className="h-5 w-5 mr-2 inline" />
             Home
           </Link>
-          <Link
-            href="/writeup"
-            scroll={false}
-            className="mx-4 hover:text-mauve"
-          >
+          <Link href="/writeup" className="mx-4 hover:text-mauve">
             <NotebookPen className="h-5 w-5 mr-2 inline" />
             The Writeup
           </Link>
-          <Link
-            href="/smiting"
-            scroll={false}
-            className="mx-4 hover:text-mauve"
-          >
+          <Link href="/smiting" className="mx-4 hover:text-mauve">
             <Strikethrough className="h-5 w-5 mr-2 inline" />
             Smiting
           </Link>
-          <Link
-            href="/download"
-            scroll={false}
-            className="mx-4 hover:text-mauve"
-          >
+          <Link href="/download" className="mx-4 hover:text-mauve">
             <Download className="h-5 w-5 mr-2 inline" />
             Download
           </Link>
