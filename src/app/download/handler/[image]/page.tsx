@@ -6,6 +6,7 @@ import { ChevronRight } from "lucide-react";
 // ALL MIRROR LINKS MUST END WITH A `/`
 const mirror1: string = "https://dl.example.com/"; // both are on the correct geolocation, links will not be included until final release.
 const mirror2: string = "https://dl.test.com/";
+const mirror3: string = "https://csmite.incognitotgt.me/";
 
 export default function Handler({ params }: { params: { image: string } }) {
   return (
@@ -29,9 +30,17 @@ export default function Handler({ params }: { params: { image: string } }) {
             <div className="text-xl font-semibold mt-5">
               <a
                 className="text-blue hover:text-mauve"
-                href={mirror1 + params.image}
+                href={mirror2 + params.image}
               >
                 <Flag name="DE" /> FWSmasher DE Mirror
+              </a>
+            </div>
+            <div className="text-xl font-semibold mt-5">
+              <a
+                className="text-blue hover:text-mauve"
+                href={mirror3 + params.image}
+              >
+                <Flag name="US" /> US-East - hosted by tgt
               </a>
             </div>
           </div>
