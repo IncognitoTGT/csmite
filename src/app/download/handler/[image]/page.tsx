@@ -4,10 +4,6 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 // Mirrors
 // ALL MIRROR LINKS MUST END WITH A `/`
-const mirror1: string = "https://dl.example.com/"; // both are on the correct geolocation, links will not be included until final release.
-const mirror2: string = "https://dl.test.com/";
-const mirror3: string = "https://csmite.incognitotgt.me/";
-
 export default function Handler({ params }: { params: { image: string } }) {
   return (
     <>
@@ -18,7 +14,10 @@ export default function Handler({ params }: { params: { image: string } }) {
         </div>
         <div className="flex text-lg text-subtext1 font-sans justify-center items-center italic">
           Want to host a mirror? Press{" "}
-          <a className="pl-1 pr-1 text-blue hover:text-mauve" href="javascript:alert('hai uwu')">
+          <a
+            className="pl-1 pr-1 text-blue hover:text-mauve"
+            href="javascript:alert('hai uwu')"
+          >
             here
           </a>{" "}
           to view more information
@@ -29,7 +28,7 @@ export default function Handler({ params }: { params: { image: string } }) {
             <div className="text-xl font-semibold mt-5">
               <a
                 className="text-blue hover:text-mauve"
-                href={mirror1 + params.image}
+                href={"https://dl.example.com/" + params.image}
               >
                 <Flag name="US" /> FWSmasher US Mirror (svh)
               </a>
@@ -37,7 +36,7 @@ export default function Handler({ params }: { params: { image: string } }) {
             <div className="text-xl font-semibold mt-5">
               <a
                 className="text-blue hover:text-mauve"
-                href={mirror2 + params.image}
+                href={"https://dl.test.com/" + params.image}
               >
                 <Flag name="FI" /> FWSmasher FI Mirror (svh)
               </a>
@@ -45,7 +44,7 @@ export default function Handler({ params }: { params: { image: string } }) {
             <div className="text-xl font-semibold mt-5">
               <a
                 className="text-blue hover:text-mauve"
-                href={mirror3 + params.image}
+                href={"https://csmite.incognitotgt.me/" + params.image}
               >
                 <Flag name="US" /> IncognitoTGT US-EAST Mirror (t.gt)
               </a>

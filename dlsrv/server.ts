@@ -15,10 +15,13 @@ const corsOptions = {
 };
 app.use(compression(compressionOptions));
 app.use(cors(corsOptions));
-app.use(express.static("images"), serveIndex('images', {
-  'icons': true,
-  'stylesheet': __dirname + '/style.css'
-}));
+app.use(
+  express.static("images"),
+  serveIndex("images", {
+    icons: true,
+    stylesheet: __dirname + "/style.css",
+  }),
+);
 app.get("/:image", (req, res) => {
   res.set("Access-Control-Expose-Headers", "Content-Length");
   res.set("Content-Type", "application/octet-stream");
