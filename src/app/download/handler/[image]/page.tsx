@@ -16,6 +16,9 @@ export default function Handler({ params }: { params: { image: string } }) {
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           Download Mirror
         </div>
+        <div className="flex text-lg text-mauve font-sans justify-center items-center italic">
+          Want to host a mirror? Press <a className="pl-1 pr-1 text-blue" href="javascript:alert('hai uwu')">here</a> to view more information
+        </div>
         <div className="flex text-lg text-text font-sans leading-loose justify-center w-[1000px] items-center mt-6 pb-5 mx-auto">
           <div className="flex-col text-center">
             Pick a download mirror to download from:
@@ -24,7 +27,7 @@ export default function Handler({ params }: { params: { image: string } }) {
                 className="text-blue hover:text-mauve"
                 href={mirror1 + params.image}
               >
-                <Flag name="US" /> FWSmasher US Mirror
+                <Flag name="US" /> FWSmasher US Mirror (svh)
               </a>
             </div>
             <div className="text-xl font-semibold mt-5">
@@ -32,7 +35,7 @@ export default function Handler({ params }: { params: { image: string } }) {
                 className="text-blue hover:text-mauve"
                 href={mirror2 + params.image}
               >
-                <Flag name="DE" /> FWSmasher DE Mirror
+                <Flag name="FI" /> FWSmasher FI Mirror (svh)
               </a>
             </div>
             <div className="text-xl font-semibold mt-5">
@@ -40,7 +43,7 @@ export default function Handler({ params }: { params: { image: string } }) {
                 className="text-blue hover:text-mauve"
                 href={mirror3 + params.image}
               >
-                <Flag name="US" /> US-East - hosted by tgt
+                <Flag name="US" /> IncognitoTGT US-EAST Mirror (t.gt)
               </a>
             </div>
           </div>
