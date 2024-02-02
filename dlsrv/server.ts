@@ -1,6 +1,7 @@
 import express from "express";
 import compression from "compression";
 import cors from "cors";
+import serveIndex from "serve-index";
 const app = express();
 const port = process.env.PORT || 3001;
 const compressionOptions = {
@@ -14,7 +15,10 @@ const corsOptions = {
 };
 app.use(compression(compressionOptions));
 app.use(cors(corsOptions));
-app.use(express.static("images"));
+app.use(express.static("images"), serveIndex('images', {
+  'icons': true,
+  'stylesheet': __dirname + '/style.css'
+}));
 app.get("/:image", (req, res) => {
   res.set("Access-Control-Expose-Headers", "Content-Length");
   res.set("Content-Type", "application/octet-stream");

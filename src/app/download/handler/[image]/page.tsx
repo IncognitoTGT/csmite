@@ -16,9 +16,9 @@ export default function Handler({ params }: { params: { image: string } }) {
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           Download Mirror
         </div>
-        <div className="flex text-lg text-mauve font-sans justify-center items-center italic">
+        <div className="flex text-lg text-subtext1 font-sans justify-center items-center italic">
           Want to host a mirror? Press{" "}
-          <a className="pl-1 pr-1 text-blue" href="javascript:alert('hai uwu')">
+          <a className="pl-1 pr-1 text-blue hover:text-mauve" href="javascript:alert('hai uwu')">
             here
           </a>{" "}
           to view more information
