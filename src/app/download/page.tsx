@@ -36,6 +36,38 @@ export default function Download() {
     ],
     [],
   );
+  const sizes = useMemo(
+    () => [
+      1024, // ambassador
+      2048, // brask
+      4096, // brya
+      8192, // clapper
+      1638, // coral
+      3276, // corsola
+      6553, // dedede
+      1310, // enguarde
+      2621, // glimmer
+      5242, // grunt
+      1048, // hana
+      2092, // hatch
+      4194, // jacuzzi
+      8388, // kukui
+      1677, // lulu
+      3355, // nami
+      6710, // octopus
+      1342, // orco
+      2684, // pyro
+      5368, // reks
+      1073, // sentry
+      2147, // stout
+      4294, // strongbad
+      8589, // tidus
+      1717, // ultima
+      3435, // volteer
+      6871, // zork
+    ],
+    [],
+  );
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredBoards, setFilteredBoards] = useState(boards);
   useEffect(() => {
@@ -69,22 +101,29 @@ export default function Download() {
           </div>
           <table className="table-auto w-full text-left border-collapse">
             <tbody>
-              {filteredBoards.map((board) => (
-                <tr key={board}>
-                  <td
-                    className={`px-4 py-2 bg-surface0 hover:bg-surface1 ${filteredBoards.indexOf(board) === 0 && "rounded-t-lg"} ${filteredBoards.indexOf(board) === filteredBoards.length - 1 && "rounded-b-lg"}`}
-                  >
-                    <Link
-                      // file path - pls fix when ready for release.
-                      href={"/download/handler/" + board}
-                      className="text-subtext0 hover:text-subtext1 outline-none border-none focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-base flex items-center"
+              {filteredBoards.map((board) => {
+                return (
+                  <tr key={board}>
+                    <td
+                      className={`px-4 py-2 bg-surface0 hover:bg-surface1 ${
+                        filteredBoards.indexOf(board) === 0 && "rounded-t-lg"
+                      } ${
+                        filteredBoards.indexOf(board) ===
+                          filteredBoards.length - 1 && "rounded-b-lg"
+                      }`}
                     >
-                      <Disc2 className="h-5 w-5 mr-2" />
-                      {board}
-                    </Link>
-                  </td>
-                </tr>
-              ))}
+                      <Link
+                        // file path - pls fix when ready for release.
+                        href={"/download/handler/" + board}
+                        className="text-subtext0 hover:text-subtext1 outline-none border-none focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-base flex items-center"
+                      >
+                        <Disc2 className="h-5 w-5 mr-2" />
+                        {board + " - " + sizes[boards.indexOf(board)] + "MB"}
+                      </Link>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
