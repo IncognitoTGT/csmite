@@ -26,7 +26,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "index.mjs",
+    "server.ts",
   ],
   "exclude": ["node_modules"],
 }

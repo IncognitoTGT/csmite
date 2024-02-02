@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node index.mjs",
+    "start": "tsx server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "IncognitoTGT",
@@ -16,5 +16,8 @@
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "express": "^4.18.2"
+  },
+  "dependencies": {
+    "tsx": "^4.7.0"
   }
 }
