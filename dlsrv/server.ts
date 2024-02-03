@@ -20,6 +20,7 @@ app.use(
   serveIndex("images", {
     icons: true,
     stylesheet: __dirname + "/style.css",
+    view: "details",
   }),
 );
 app.get("/:image", (req, res) => {

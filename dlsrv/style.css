@@ -99,7 +99,7 @@ ul#files li a:hover {
 ul#files li a.highlight {
   -webkit-transition: background 0.4s ease-in-out;
   background: var(--ctp-mocha-yellow);
-  border-color: var(--ctp-mocha-yellow);
+  border-color: var(--ctp-mocha-blue);
 }
 #search {
   display: block;
@@ -224,14 +224,14 @@ ul#files.view-details li.header {
     float: none;
     width: auto !important;
     display: block;
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid var(--ctp-mocha-mantle);
     font-size: 2em;
     line-height: 1.2em;
     text-indent: 0;
     margin: 0;
   }
   ul#files li:nth-child(odd) {
-    background: #e0e0e0;
+    background: var(--ctp-mocha-crust);
   }
   ul#files li a {
     height: auto;
