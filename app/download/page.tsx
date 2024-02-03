@@ -36,38 +36,35 @@ export default function Download() {
     ],
     [],
   );
-  const sizes = useMemo(
-    () => [
-      3.2, // ambassador
-      4.7, // brask
-      5.4, // brya
-      5.1, // clapper
-      3.4, // coral
-      5.7, // corsola
-      4.9, // dedede
-      4.1, // enguarde
-      4.0, // glimmer
-      3.7, // grunt
-      5.1, // hana
-      4.2, // hatch
-      3.5, // jacuzzi
-      3.7, // kukui
-      7.3, // lulu
-      4.2, // nami
-      4.2, // octopus
-      4.1, // orco
-      5.7, // pyro
-      5.0, // reks
-      5.0, // sentry
-      3.7, // stout
-      4.3, // strongbad
-      4.1, // tidus
-      4.3, // ultima
-      4.7, // volteer
-      5.0, // zork
-    ],
-    [],
-  );
+  const sizes = [
+    3.2, // ambassador
+    4.7, // brask
+    5.4, // brya
+    5.1, // clapper
+    3.4, // coral
+    5.7, // corsola
+    4.9, // dedede
+    4.1, // enguarde
+    4.0, // glimmer
+    3.7, // grunt
+    5.1, // hana
+    4.2, // hatch
+    3.5, // jacuzzi
+    3.7, // kukui
+    7.3, // lulu
+    4.2, // nami
+    4.2, // octopus
+    4.1, // orco
+    5.7, // pyro
+    5.0, // reks
+    5.0, // sentry
+    3.7, // stout
+    4.3, // strongbad
+    4.1, // tidus
+    4.3, // ultima
+    4.7, // volteer
+    5.0, // zork
+  ];
   const disabledBoards = [
     "hana.bin",
     "jacuzzi.bin",
