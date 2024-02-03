@@ -68,6 +68,12 @@ export default function Download() {
     ],
     [],
   );
+  const disabledBoards = [
+    "hana.bin",
+    "jacuzzi.bin",
+    "kukui.bin",
+    "strongbad.bin",
+  ];
 
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredBoards, setFilteredBoards] = useState(boards);
@@ -90,9 +96,12 @@ export default function Download() {
           Here, you will find the Cryptosmite images for your Chromebook. These
           images are specific to your Chromebook&apos;s board, not just your
           device.{" "}
-          <p className="font-bold">
+          <p className="font-bold text-center text-blue">
             If your Chromebook is not on the list, your Chromebook is not
             supported by Cryptosmite.
+            <br />
+            If your boardname is grayed out, you have an ARM Chromebook, which
+            isn&apos;t supported right now but will be in the future.
           </p>
           <br />
           <div className="flex flex-auto">
@@ -110,7 +119,9 @@ export default function Download() {
                 return (
                   <tr key={board}>
                     <td
-                      className={`px-4 py-2 bg-surface0 hover:bg-surface1 ${
+                      className={`px-4 py-2 
+                      ${disabledBoards.includes(board) ? "bg-surface0" : "bg-surface0 hover:bg-surface1"}
+                      ${
                         filteredBoards.indexOf(board) === 0 && "rounded-t-lg"
                       } ${
                         filteredBoards.indexOf(board) ===
@@ -119,8 +130,12 @@ export default function Download() {
                     >
                       <Link
                         // file path - pls fix when ready for release.
-                        href={"/download/handler/" + board}
-                        className="text-subtext0 hover:text-subtext1 outline-none border-none focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-base flex items-center justify-between"
+                        href={
+                          disabledBoards.includes(board)
+                            ? "#"
+                            : "/download/handler/" + board
+                        }
+                        className={`${disabledBoards.includes(board) ? "text-surface1 cursor-not-allowed" : "text-subtext0 hover:text-subtext1"} outline-none border-none focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-base flex items-center justify-between`}
                       >
                         <Disc2 className="h-5 w-5 mr-2" />
                         <div className="flex items-center w-full justify-between">
