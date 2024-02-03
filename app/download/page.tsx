@@ -89,7 +89,11 @@ export default function Download() {
         <div className="flex text-lg text-text font-sans justify-center items-center w-[1000px] flex-col mx-auto mt-6 ">
           Here, you will find the Cryptosmite images for your Chromebook. These
           images are specific to your Chromebook&apos;s board, not just your
-          device.
+          device.{" "}
+          <p className="font-bold">
+            If your Chromebook is not on the list, your Chromebook is not
+            supported by Cryptosmite.
+          </p>
           <br />
           <div className="flex flex-auto">
             <input
