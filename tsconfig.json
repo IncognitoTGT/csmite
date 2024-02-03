@@ -26,7 +26,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "dlsrv/index.mjs",
   ],
-  "exclude": ["node_modules"],
+  "exclude": [
+    "node_modules",
+    "dlsrv/**/*",
+  ],
 }
