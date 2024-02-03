@@ -37,8 +37,8 @@ export default function Home() {
             2. That&apos;s it, have fun. This exploit will be released after
             Google pays us with VRP.
             <br />
+            Some features this exploit offers:
             <ul className="list-decimal list-inside">
-              Some features this exploit offers:
               <li>
                 You can re enroll without going through oobe, bypassing sign in
                 registration

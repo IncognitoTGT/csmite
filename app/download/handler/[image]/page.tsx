@@ -1,4 +1,4 @@
-import NavBar from "@/app/NavBar";
+import NavBar from "@/NavBar";
 import Flag from "./flag";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";

@@ -6,6 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Cryptosmite",
+  description: "A new way to unenroll Chromebooks",
   other: { "darkreader-lock": "idk what to put here (nextjs moment)" },
 };
 
