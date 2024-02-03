@@ -2,8 +2,8 @@
   "ci": {
     "collect": {
       "url": ["http://localhost:8080"],
-      "startServerCommand": "tsx index.ts",
-      "startServerReadyPattern": "Ephemeral is running ",
+      "startServerCommand": "pnpm run start",
+      "startServerReadyPattern": ":3 ",
       "numberOfRuns": 1,
       "isSinglePageApplication": true,
       "settings": {
