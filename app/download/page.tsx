@@ -4,35 +4,35 @@ import Link from "next/link";
 import { Disc2 } from "lucide-react";
 import NavBar from "../NavBar";
 export default function Download() {
-  const boards =  [
-      "ambassador.bin",
-      "brask.bin",
-      "brya.bin",
-      "clapper.bin",
-      "coral.bin",
-      "corsola.bin",
-      "dedede.bin",
-      "enguarde.bin",
-      "glimmer.bin",
-      "grunt.bin",
-      "hana.bin",
-      "hatch.bin",
-      "jacuzzi.bin",
-      "kukui.bin",
-      "lulu.bin",
-      "nami.bin",
-      "octopus.bin",
-      "orco.bin",
-      "pyro.bin",
-      "reks.bin",
-      "sentry.bin",
-      "stout.bin",
-      "strongbad.bin",
-      "tidus.bin",
-      "ultima.bin",
-      "volteer.bin",
-      "zork.bin",
-    ]
+  const boards = [
+    "ambassador.bin",
+    "brask.bin",
+    "brya.bin",
+    "clapper.bin",
+    "coral.bin",
+    "corsola.bin",
+    "dedede.bin",
+    "enguarde.bin",
+    "glimmer.bin",
+    "grunt.bin",
+    "hana.bin",
+    "hatch.bin",
+    "jacuzzi.bin",
+    "kukui.bin",
+    "lulu.bin",
+    "nami.bin",
+    "octopus.bin",
+    "orco.bin",
+    "pyro.bin",
+    "reks.bin",
+    "sentry.bin",
+    "stout.bin",
+    "strongbad.bin",
+    "tidus.bin",
+    "ultima.bin",
+    "volteer.bin",
+    "zork.bin",
+  ];
   const sizes = [
     3.2, // ambassador
     4.7, // brask
@@ -91,12 +91,13 @@ export default function Download() {
           device.{" "}
           <div className="font-bold text-text mt-2">
             <p className="text-red">
-            &nbsp;If your Chromebook is not on the list, your Chromebook is not
-            supported by Cryptosmite. Do not ask for support for your device.
+              &nbsp;If your Chromebook is not on the list, your Chromebook is
+              not supported by Cryptosmite. Do not ask for support for your
+              device.
             </p>
-            &nbsp;If your boardname is grayed out, you have an ARM Chromebook, which
-            isn&apos;t supported right now but will be in the future.
-            </div>
+            &nbsp;If your boardname is grayed out, you have an ARM Chromebook,
+            which isn&apos;t supported right now but will be in the future.
+          </div>
           <br />
           <div className="flex flex-auto">
             <input
@@ -123,13 +124,15 @@ export default function Download() {
                       }`}
                     >
                       <Link
-                      {...(disabledBoards.includes(board)) ? { scroll: false } : {}}
+                        {...(disabledBoards.includes(board)
+                          ? { scroll: false }
+                          : {})}
                         href={
                           disabledBoards.includes(board)
                             ? "#"
                             : "/download/handler/" + board
                         }
-                        className={`${disabledBoards.includes(board) ? "text-surface1 cursor-not-allowed" : "text-subtext0 hover:text-subtext1"} outline-none border-none ${!disabledBoards.includes(board) && "focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-surface0 rounded" } flex items-center justify-between`}
+                        className={`${disabledBoards.includes(board) ? "text-surface1 cursor-not-allowed" : "text-subtext0 hover:text-subtext1"} outline-none border-none ${!disabledBoards.includes(board) && "focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-surface0 rounded"} flex items-center justify-between`}
                       >
                         <Disc2 className="h-5 w-5 mr-2" />
                         <div className="flex items-center w-full justify-between">
