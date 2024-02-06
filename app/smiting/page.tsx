@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import NavBar from "@/NavBar";
 export default function SmiteOne() {
   return (
@@ -31,10 +31,13 @@ export default function SmiteOne() {
           </div>
         </div>
         <footer className="flex flex-row font-sans justify-center text-2xl text-mauve items-center bottom-5">
-          <Link href="/smiting/step2" className="hover:underline">
+          <Link
+            href="/smiting/step2"
+            className="underline underline-offset-2 hover:text-blue"
+          >
             Next
           </Link>
-          <ChevronRight className="h-10 w-10" />
+          <ChevronRight className="h-10 w-10 text-text" />
         </footer>
       </main>
     </>

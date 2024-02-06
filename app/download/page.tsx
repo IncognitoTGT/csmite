@@ -85,7 +85,7 @@ export default function Download() {
   return (
     <>
       <NavBar />
-      <main className="flex-col justify-between p-5 mx-auto  bg-base">
+      <main className="flex-col justify-between p-5 mx-auto bg-base">
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           Download Images
         </div>

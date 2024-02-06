@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import NavBar from "@/NavBar";
 export default function SmiteTwo() {
@@ -14,15 +13,21 @@ export default function SmiteTwo() {
           <div className="flex-col">hai uwu</div>
         </div>
         <footer className="flex flex-row font-sans justify-center text-2xl text-mauve items-center bottom-5">
-          <ChevronLeft className="h-10 w-10" />
-          <Link href="/smiting" className="hover:underline">
+          <ChevronLeft className="h-10 w-10 text-text" />
+          <Link
+            href="/smiting"
+            className="underline underline-offset-2 hover:text-blue"
+          >
             Previous
           </Link>
           <div className="mx-5">|</div>
-          <Link href="/smiting/step3" className="hover:underline">
+          <Link
+            href="/smiting/step3"
+            className="underline underline-offset-2 hover:text-blue"
+          >
             Next
           </Link>
-          <ChevronRight className="h-10 w-10" />
+          <ChevronRight className="h-10 w-10 text-text" />
         </footer>
       </main>
     </>
