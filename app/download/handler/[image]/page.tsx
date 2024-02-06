@@ -52,7 +52,7 @@ export default function Handler({ params }: { params: { image: string } }) {
           </div>
         </div>
         <footer className="flex flex-row font-sans justify-center text-2xl text-blue hover:text-mauve items-center bottom-5">
-          <Link href="/smiting/step2" className="underline underline-offset-2">
+          <Link href="/smiting/step2" className="underline underline-offset-2 outline-none">
             Continue smiting your device
           </Link>
           <ChevronRight className="h-10 w-10" />

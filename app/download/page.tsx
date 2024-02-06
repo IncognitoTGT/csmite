@@ -1,11 +1,10 @@
 "use client";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Disc2 } from "lucide-react";
 import NavBar from "../NavBar";
 export default function Download() {
-  const boards = useMemo(
-    () => [
+  const boards =  [
       "ambassador.bin",
       "brask.bin",
       "brya.bin",
@@ -33,9 +32,7 @@ export default function Download() {
       "ultima.bin",
       "volteer.bin",
       "zork.bin",
-    ],
-    [],
-  );
+    ]
   const sizes = [
     3.2, // ambassador
     4.7, // brask
@@ -80,26 +77,26 @@ export default function Download() {
         board.toLowerCase().startsWith(searchTerm.toLowerCase()),
       ),
     );
-  }, [searchTerm, boards]);
-  // alert() / console.log() best debugger trust
+  }, [searchTerm]);
   return (
     <>
       <NavBar />
       <main className="flex-col justify-between p-5 mx-auto bg-base">
-        <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
+        <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center">
           Download Images
         </div>
-        <div className="flex text-lg text-text font-sans justify-center items-center w-[1000px] flex-col mx-auto mt-6 ">
+        <div className="flex text-lg text-text font-sans justify-center items-center w-[1000px] flex-col mx-auto mt-6 text-center">
           Here, you will find the Cryptosmite images for your Chromebook. These
           images are specific to your Chromebook&apos;s board, not just your
           device.{" "}
-          <p className="font-bold text-center text-blue">
-            If your Chromebook is not on the list, your Chromebook is not
-            supported by Cryptosmite.
-            <br />
-            If your boardname is grayed out, you have an ARM Chromebook, which
+          <div className="font-bold text-text mt-2">
+            <p className="text-red">
+            &nbsp;If your Chromebook is not on the list, your Chromebook is not
+            supported by Cryptosmite. Do not ask for support for your device.
+            </p>
+            &nbsp;If your boardname is grayed out, you have an ARM Chromebook, which
             isn&apos;t supported right now but will be in the future.
-          </p>
+            </div>
           <br />
           <div className="flex flex-auto">
             <input
@@ -126,13 +123,13 @@ export default function Download() {
                       }`}
                     >
                       <Link
-                        // file path - pls fix when ready for release.
+                      {...(disabledBoards.includes(board)) ? { scroll: false } : {}}
                         href={
                           disabledBoards.includes(board)
                             ? "#"
                             : "/download/handler/" + board
                         }
-                        className={`${disabledBoards.includes(board) ? "text-surface1 cursor-not-allowed" : "text-subtext0 hover:text-subtext1"} outline-none border-none focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-base flex items-center justify-between`}
+                        className={`${disabledBoards.includes(board) ? "text-surface1 cursor-not-allowed" : "text-subtext0 hover:text-subtext1"} outline-none border-none ${!disabledBoards.includes(board) && "focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-surface0 rounded" } flex items-center justify-between`}
                       >
                         <Disc2 className="h-5 w-5 mr-2" />
                         <div className="flex items-center w-full justify-between">

@@ -33,7 +33,7 @@ export default function SmiteOne() {
         <footer className="flex flex-row font-sans justify-center text-2xl text-mauve items-center bottom-5">
           <Link
             href="/smiting/step2"
-            className="underline underline-offset-2 hover:text-blue"
+            className="underline underline-offset-2 hover:text-blue outline-none"
           >
             Next
           </Link>
