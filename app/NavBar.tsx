@@ -11,7 +11,7 @@ export default function NavBar() {
   return (
     <>
       <ThemeSwitch />
-      <nav className="sticky top-0 w-full flex flex-row p-5 mx-auto bg-base/40 backdrop-blur-3xl">
+      <nav className="sticky top-0 w-full flex flex-row p-5 pb-8 mx-auto bg-base/40 backdrop-blur-3xl">
         <div className="absolute left-5 font-mono font-bold text-text text-4xl -mt-2">
           Cryptosmite
         </div>

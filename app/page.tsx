@@ -3,8 +3,8 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main className={`flex-col justify-between p-5 mx-auto bg-base`}>
-        <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
+      <main className="flex-col justify-between p-5 mx-auto bg-base">
+        <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center">
           So, what exactly is Cryptosmite again?
         </div>
         <div className="flex text-lg text-text font-sans leading-loose justify-center w-[1000px] items-center mt-6 pb-5 mx-auto">

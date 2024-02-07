@@ -7,7 +7,7 @@ interface Image {
 }
 // Mirrors
 // ALL MIRROR LINKS MUST END WITH A `/`
-export default function Handler({ params }: { params: Image}) {
+export default function Handler({ params }: { params: Image }) {
   return (
     <>
       <NavBar />
