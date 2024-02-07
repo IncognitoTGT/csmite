@@ -77,6 +77,7 @@ export default function Download() {
         board.toLowerCase().startsWith(searchTerm.toLowerCase()),
       ),
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm]);
   return (
     <>
