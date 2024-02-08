@@ -49,7 +49,7 @@ export default function Handler({ params }: { params: Image }) {
                 className="text-blue hover:text-mauve"
                 href={"https://csmite.incognitotgt.me/" + params.image}
               >
-                <Flag name="US" /> IncognitoTGT US-EAST Mirror (t.gt)
+                <Flag name="US" /> IncognitoTGT US-EAST Mirror (tg.t)
               </a>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import NavBar from "./NavBar";
-
 export default function NotFound() {
   return (
     <>

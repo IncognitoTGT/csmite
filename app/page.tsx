@@ -40,7 +40,7 @@ export default function Home() {
             Some features this exploit offers:
             <ul className="list-decimal list-inside">
               <li>
-                You can re enroll without going through oobe, bypassing sign in
+                You can reenroll without going through oobe, bypassing sign in
                 registration
               </li>
               <li>You can unenroll completely</li>
