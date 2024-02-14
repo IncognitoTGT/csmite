@@ -6,11 +6,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Cryptosmite",
   description: "A new way to unenroll Chromebooks",
+  metadataBase: new URL("https://fw.asyncsmasher.com"),
   openGraph: {
     title: "Cryptosmite",
     description: "A new way to unenroll Chromebooks",
     type: "website",
-    url: "",
+    url: "https://fw.asyncsmasher.com",
     images: "/icon.jpeg",
   },
   other: {
