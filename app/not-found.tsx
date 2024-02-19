@@ -1,8 +1,6 @@
-import NavBar from "./NavBar";
 export default function NotFound() {
   return (
     <>
-      <NavBar />
       <main className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
         <div className="text-5xl text-red font-bold font-mono text-center">
           404

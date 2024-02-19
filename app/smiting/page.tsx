@@ -1,11 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
-import NavBar from "@/NavBar";
 export default function SmiteOne() {
   return (
     <>
-      <NavBar />
       <main className={`flex-col justify-between p-5 mx-auto  bg-base`}>
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           Step 1 - Find your board name

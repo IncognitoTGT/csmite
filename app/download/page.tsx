@@ -2,65 +2,38 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Disc2 } from "lucide-react";
-import NavBar from "../NavBar";
 export default function Download() {
-  const boards = [
-    "ambassador.bin",
-    "brask.bin",
-    "brya.bin",
-    "clapper.bin",
-    "coral.bin",
-    "corsola.bin",
-    "dedede.bin",
-    "enguarde.bin",
-    "glimmer.bin",
-    "grunt.bin",
-    "hana.bin",
-    "hatch.bin",
-    "jacuzzi.bin",
-    "kukui.bin",
-    "lulu.bin",
-    "nami.bin",
-    "octopus.bin",
-    "orco.bin",
-    "pyro.bin",
-    "reks.bin",
-    "sentry.bin",
-    "stout.bin",
-    "strongbad.bin",
-    "tidus.bin",
-    "ultima.bin",
-    "volteer.bin",
-    "zork.bin",
-  ];
-  const sizes = [
-    3.2, // ambassador
-    4.7, // brask
-    5.4, // brya
-    5.1, // clapper
-    3.4, // coral
-    5.7, // corsola
-    4.9, // dedede
-    4.1, // enguarde
-    4.0, // glimmer
-    3.7, // grunt
-    5.1, // hana
-    4.2, // hatch
-    3.5, // jacuzzi
-    3.7, // kukui
-    7.3, // lulu
-    4.2, // nami
-    4.2, // octopus
-    4.1, // orco
-    5.7, // pyro
-    5.0, // reks
-    5.0, // sentry
-    3.7, // stout
-    4.3, // strongbad
-    4.1, // tidus
-    4.3, // ultima
-    4.7, // volteer
-    5.0, // zork
+  const devices: {
+    board: string;
+    size: number;
+  }[] = [
+    { board: "ambassador.bin", size: 3.2 },
+    { board: "brask.bin", size: 4.7 },
+    { board: "brya.bin", size: 5.4 },
+    { board: "clapper.bin", size: 5.1 },
+    { board: "coral.bin", size: 3.4 },
+    { board: "corsola.bin", size: 5.7 },
+    { board: "dedede.bin", size: 4.9 },
+    { board: "enguarde.bin", size: 4.1 },
+    { board: "glimmer.bin", size: 4.0 },
+    { board: "grunt.bin", size: 3.7 },
+    { board: "hana.bin", size: 5.1 },
+    { board: "hatch.bin", size: 4.2 },
+    { board: "jacuzzi.bin", size: 3.5 },
+    { board: "kukui.bin", size: 3.7 },
+    { board: "lulu.bin", size: 7.3 },
+    { board: "nami.bin", size: 4.2 },
+    { board: "octopus.bin", size: 4.2 },
+    { board: "orco.bin", size: 4.1 },
+    { board: "pyro.bin", size: 5.7 },
+    { board: "reks.bin", size: 5.0 },
+    { board: "sentry.bin", size: 5.0 },
+    { board: "stout.bin", size: 3.7 },
+    { board: "strongbad.bin", size: 4.3 },
+    { board: "tidus.bin", size: 4.1 },
+    { board: "ultima.bin", size: 4.3 },
+    { board: "volteer.bin", size: 4.7 },
+    { board: "zork.bin", size: 5.0 },
   ];
   const disabledBoards = [
     "hana.bin",
@@ -70,18 +43,17 @@ export default function Download() {
   ];
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredBoards, setFilteredBoards] = useState(boards);
+  const [filteredBoards, setFilteredBoards] = useState(devices);
   useEffect(() => {
     setFilteredBoards(
-      boards.filter((board) =>
-        board.toLowerCase().startsWith(searchTerm.toLowerCase()),
+      devices.filter((device) =>
+        device.board.toLowerCase().startsWith(searchTerm.toLowerCase()),
       ),
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm]);
   return (
     <>
-      <NavBar />
       <main className="flex-col justify-between p-5 mx-auto bg-base">
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center">
           Download Images
@@ -111,35 +83,33 @@ export default function Download() {
           </div>
           <table className="table-auto w-full text-left border-collapse">
             <tbody>
-              {filteredBoards.map((board) => {
+              {filteredBoards.map((device) => {
                 return (
-                  <tr key={board}>
+                  <tr key={device.board}>
                     <td
                       className={`px-4 py-2 
-                      ${disabledBoards.includes(board) ? "bg-surface0" : "bg-surface0 hover:bg-surface1"}
-                      ${
-                        filteredBoards.indexOf(board) === 0 && "rounded-t-lg"
-                      } ${
-                        filteredBoards.indexOf(board) ===
+                      ${disabledBoards.includes(device.board) ? "bg-surface0" : "bg-surface0 hover:bg-surface1"}
+                      ${filteredBoards.indexOf(device) === 0 && "rounded-t-lg"} ${
+                        filteredBoards.indexOf(device) ===
                           filteredBoards.length - 1 && "rounded-b-lg"
                       }`}
                     >
                       <Link
-                        {...(disabledBoards.includes(board)
+                        {...(disabledBoards.includes(device.board)
                           ? { scroll: false }
                           : {})}
                         href={
-                          disabledBoards.includes(board)
+                          disabledBoards.includes(device.board)
                             ? "#"
-                            : "/download/handler/" + board
+                            : "/download/handler/" + device.board
                         }
-                        className={`${disabledBoards.includes(board) ? "text-surface1 cursor-not-allowed" : "text-subtext0 hover:text-subtext1"} outline-none border-none ${!disabledBoards.includes(board) && "focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-surface0 rounded"} flex items-center justify-between`}
+                        className={`${disabledBoards.includes(device.board) ? "text-surface1 cursor-not-allowed" : "text-subtext0 hover:text-subtext1"} outline-none border-none ${!disabledBoards.includes(device.board) && "focus:ring-4 ring-subtext0 ring-offset-4 ring-offset-surface0 rounded"} flex items-center justify-between`}
                       >
                         <Disc2 className="h-5 w-5 mr-2" />
                         <div className="flex items-center w-full justify-between">
-                          <p className="text-left">{board}</p>
+                          <p className="text-left">{device.board}</p>
                           <p className="text-right pr-4">
-                            {sizes[boards.indexOf(board)] + " GiB"}
+                            {device.size + " GiB"}
                           </p>
                         </div>
                       </Link>

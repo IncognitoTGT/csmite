@@ -1,4 +1,3 @@
-import NavBar from "@/NavBar";
 import Flag from "./flag";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
@@ -10,7 +9,6 @@ interface Image {
 export default function Handler({ params }: { params: Image }) {
   return (
     <>
-      <NavBar />
       <main className={`flex-col justify-between p-5 mx-auto  bg-base`}>
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           Download Mirror

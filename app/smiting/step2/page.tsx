@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import NavBar from "@/NavBar";
+
 export default function SmiteTwo() {
   return (
     <>
-      <NavBar />
       <main className={`flex-col justify-between p-5 mx-auto  bg-base`}>
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           Step 2 - do something
