@@ -2,11 +2,11 @@ import Link from "next/link";
 export default function FAQ() {
   return (
     <>
-      <main className="flex-col justify-between p-5 mx-auto bg-base">
+      <main className="flex-col p-5 mx-auto bg-base">
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center">
           FAQ
         </div>
-        <div className="flex flex-col text-lg text-text font-sans leading-loose justify-center w-[1000px] items-center mt-6 pb-5 mx-auto space-y-2 text-center">
+        <div className="flex flex-col text-lg text-text font-sans leading-loose justify-center items-center mt-6 pb-5 mx-auto space-y-2 text-center">
           <h1 className="text-2xl font-sans font-bold text-mauve">
             I don&apos;t have a flash drive, can you send me one?
           </h1>

@@ -1,46 +1,46 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { Disc2 } from "lucide-react";
 export default function Download() {
-  const devices: {
-    board: string;
-    size: number;
-  }[] = [
-    { board: "ambassador.bin", size: 3.2 },
-    { board: "brask.bin", size: 4.7 },
-    { board: "brya.bin", size: 5.4 },
-    { board: "clapper.bin", size: 5.1 },
-    { board: "coral.bin", size: 3.4 },
-    { board: "corsola.bin", size: 5.7 },
-    { board: "dedede.bin", size: 4.9 },
-    { board: "enguarde.bin", size: 4.1 },
-    { board: "glimmer.bin", size: 4.0 },
-    { board: "grunt.bin", size: 3.7 },
-    { board: "hana.bin", size: 5.1 },
-    { board: "hatch.bin", size: 4.2 },
-    { board: "jacuzzi.bin", size: 3.5 },
-    { board: "kukui.bin", size: 3.7 },
-    { board: "lulu.bin", size: 7.3 },
-    { board: "nami.bin", size: 4.2 },
-    { board: "octopus.bin", size: 4.2 },
-    { board: "orco.bin", size: 4.1 },
-    { board: "pyro.bin", size: 5.7 },
-    { board: "reks.bin", size: 5.0 },
-    { board: "sentry.bin", size: 5.0 },
-    { board: "stout.bin", size: 3.7 },
-    { board: "strongbad.bin", size: 4.3 },
-    { board: "tidus.bin", size: 4.1 },
-    { board: "ultima.bin", size: 4.3 },
-    { board: "volteer.bin", size: 4.7 },
-    { board: "zork.bin", size: 5.0 },
-  ];
-  const disabledBoards = [
-    "hana.bin",
-    "jacuzzi.bin",
-    "kukui.bin",
-    "strongbad.bin",
-  ];
+  const devices = useMemo<
+    {
+      board: string;
+      size: number;
+    }[]
+  >(
+    () => [
+      { board: "ambassador.bin", size: 3.2 },
+      { board: "brask.bin", size: 4.7 },
+      { board: "brya.bin", size: 5.4 },
+      { board: "clapper.bin", size: 5.1 },
+      { board: "coral.bin", size: 3.4 },
+      { board: "corsola.bin", size: 5.7 },
+      { board: "dedede.bin", size: 4.9 },
+      { board: "enguarde.bin", size: 4.1 },
+      { board: "glimmer.bin", size: 4.0 },
+      { board: "grunt.bin", size: 3.7 },
+      { board: "hana.bin", size: 5.1 },
+      { board: "hatch.bin", size: 4.2 },
+      { board: "jacuzzi.bin", size: 3.5 },
+      { board: "kukui.bin", size: 3.7 },
+      { board: "lulu.bin", size: 7.3 },
+      { board: "nami.bin", size: 4.2 },
+      { board: "octopus.bin", size: 4.2 },
+      { board: "orco.bin", size: 4.1 },
+      { board: "pyro.bin", size: 5.7 },
+      { board: "reks.bin", size: 5.0 },
+      { board: "sentry.bin", size: 5.0 },
+      { board: "stout.bin", size: 3.7 },
+      { board: "strongbad.bin", size: 4.3 },
+      { board: "tidus.bin", size: 4.1 },
+      { board: "ultima.bin", size: 4.3 },
+      { board: "volteer.bin", size: 4.7 },
+      { board: "zork.bin", size: 5.0 },
+    ],
+    [],
+  );
+  const disabledBoards = [""];
 
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredBoards, setFilteredBoards] = useState(devices);
@@ -50,15 +50,14 @@ export default function Download() {
         device.board.toLowerCase().startsWith(searchTerm.toLowerCase()),
       ),
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchTerm]);
+  }, [searchTerm, devices]);
   return (
     <>
-      <main className="flex-col justify-between p-5 mx-auto bg-base">
+      <main className="flex-col p-5 mx-auto bg-base">
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center">
           Download Images
         </div>
-        <div className="flex text-lg text-text font-sans justify-center items-center w-[1000px] flex-col mx-auto mt-6 text-center">
+        <div className="flex text-lg text-text font-sans justify-center items-center flex-col mx-auto mt-6 text-center">
           Here, you will find the Cryptosmite images for your Chromebook. These
           images are specific to your Chromebook&apos;s board, not just your
           device.{" "}

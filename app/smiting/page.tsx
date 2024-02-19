@@ -4,11 +4,11 @@ import { ChevronRight } from "lucide-react";
 export default function SmiteOne() {
   return (
     <>
-      <main className={`flex-col justify-between p-5 mx-auto  bg-base`}>
+      <main className="flex-col p-5 mx-auto bg-base">
         <div className="flex text-3xl text-mauve font-bold font-mono justify-center items-center ">
           Step 1 - Find your board name
         </div>
-        <div className="flex text-lg text-text font-sans leading-relaxed justify-center w-[1000px] items-center mt-6 pb-5 mx-auto">
+        <div className="flex text-lg text-text font-sans leading-relaxed justify-center items-center mt-6 pb-5 mx-auto">
           <div className="flex-col">
             &nbsp;First, you need to get your Chromebook&apos;s board number.
             Note that this is NOT the codename of your device. To find your
@@ -21,8 +21,9 @@ export default function SmiteOne() {
             the image for your board, and proceed to the next step.
             <Image
               src="/images/boardname.png"
-              width={1000}
-              height={500}
+              priority={true}
+              width={1366}
+              height={768}
               className="mt-2"
               alt="Board name"
             />
