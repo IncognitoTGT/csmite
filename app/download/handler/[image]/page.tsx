@@ -4,6 +4,27 @@ import { ChevronRight } from "lucide-react";
 // Mirrors
 // ALL MIRROR LINKS MUST END WITH A `/`
 export default function Handler({ params }: { params: { image: string } }) {
+  const mirrors: {
+    flag: React.ReactNode;
+    name: string;
+    link: URL;
+  }[] = [
+    {
+      flag: <Flag name="US" />,
+      name: "FWSmasher US Mirror (svh)",
+      link: new URL("https://dl.example.com/"),
+    },
+    {
+      flag: <Flag name="FI" />,
+      name: "FWSmasher FI Mirror (svh)",
+      link: new URL("https://dl.test.com/"),
+    },
+    {
+      flag: <Flag name="US" />,
+      name: "IncognitoTGT US-EAST Mirror (tg.t)",
+      link: new URL("https://csmite.incognitotgt.me/"),
+    },
+  ];
   return (
     <>
       <main className="flex-col p-5 mx-auto bg-base">
@@ -18,30 +39,16 @@ export default function Handler({ params }: { params: { image: string } }) {
         <div className="flex text-lg text-text font-sans leading-loose justify-center items-center mt-6 pb-5 mx-auto">
           <div className="flex-col text-center mb-10">
             Pick a download mirror to download from:
-            <div className="text-xl font-semibold mt-5">
-              <a
-                className="text-blue underline"
-                href={"https://dl.example.com/" + params.image}
-              >
-                <Flag name="US" /> FWSmasher US Mirror (svh)
-              </a>
-            </div>
-            <div className="text-xl font-semibold mt-5">
-              <a
-                className="text-blue underline"
-                href={"https://dl.test.com/" + params.image}
-              >
-                <Flag name="FI" /> FWSmasher FI Mirror (svh)
-              </a>
-            </div>
-            <div className="text-xl font-semibold mt-5">
-              <a
-                className="text-blue underline"
-                href={"https://csmite.incognitotgt.me/" + params.image}
-              >
-                <Flag name="US" /> IncognitoTGT US-EAST Mirror (tg.t)
-              </a>
-            </div>
+            {mirrors.map((mirror) => (
+              <div className="text-xl font-semibold mt-5" key={mirror.name}>
+                <a
+                  className="text-blue underline"
+                  href={mirror.link + params.image}
+                >
+                  {mirror.flag} {mirror.name}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
         <footer className="flex flex-row font-sans justify-center text-2xl text-mauve items-center bottom-5">

@@ -80,20 +80,20 @@ export default function RootLayout({
       >
         <Providers>
           <ThemeSwitch />
-          <nav className="fixed top-0 p-5 bg-mantle/40 backdrop-blur-3xl w-full md:w-64  md:h-screen justify-end flex-grow">
-            <div className="font-mono font-bold text-text text-3xl pb-4 text-center">
+          <nav className="fixed top-0 p-5 bg-mantle/40 backdrop-blur-3xl w-full md:w-64 md:h-screen flex-grow">
+            <div className="font-mono font-bold text-text text-3xl pb-4 md:text-left text-center">
               Cryptosmite
             </div>
-            <div className="flex flex-col text-blue font-sans font-medium text-xl md:flex-grow md:justify-end flex-grow-0 justify-between -mt-3">
-              <div className="flex flex-row md:flex-col justify-center">
+            <div className="flex flex-col text-blue font-sans font-medium text-xl flex-grow-0 justify-between -mt-3">
+              <div className="flex flex-row md:flex-col">
                 {links.map((link) => (
                   <Link
                     href={link.href}
                     key={link.href}
-                    className="my-4 outline-none text-blue mx-2 text-center hover:text-mauve"
+                    className="my-4 outline-none text-blue mx-2 md:text-left text-center hover:text-mauve"
                   >
                     {link.icon}
-                    {link.text}
+                    <p className="sm:inline hidden">{link.text}</p>
                   </Link>
                 ))}
               </div>
