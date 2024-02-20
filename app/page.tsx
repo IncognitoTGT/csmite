@@ -67,7 +67,7 @@ export default function Home() {
               Credits
             </div>
             I (MunyDev) have pioneered the exploit, and Catakang, kxtz,
-            Fallenmoon8080, Melitha, and Jimmy, have all tested the exploit.
+            Fallenmoon8080, OlyB, and Jimmy, have all tested the exploit.
             <br />
             The frontend website code was written by tg.t and kxtz.
           </div>
