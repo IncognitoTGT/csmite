@@ -12,17 +12,15 @@ export default function Handler({ params }: { params: { image: string } }) {
         </div>
         <div className="flex text-lg text-subtext1 font-sans justify-center items-center italic">
           Want to host a mirror? Press&nbsp;
-          <a className="text-blue hover:text-mauve underline underline-offset-1 inline">
-            here
-          </a>
+          <a className="text-blue underline underline-offset-1 inline">here</a>
           &nbsp;to view more information
         </div>
         <div className="flex text-lg text-text font-sans leading-loose justify-center items-center mt-6 pb-5 mx-auto">
-          <div className="flex-col text-center">
+          <div className="flex-col text-center mb-10">
             Pick a download mirror to download from:
             <div className="text-xl font-semibold mt-5">
               <a
-                className="text-blue hover:text-mauve"
+                className="text-blue underline"
                 href={"https://dl.example.com/" + params.image}
               >
                 <Flag name="US" /> FWSmasher US Mirror (svh)
@@ -30,7 +28,7 @@ export default function Handler({ params }: { params: { image: string } }) {
             </div>
             <div className="text-xl font-semibold mt-5">
               <a
-                className="text-blue hover:text-mauve"
+                className="text-blue underline"
                 href={"https://dl.test.com/" + params.image}
               >
                 <Flag name="FI" /> FWSmasher FI Mirror (svh)
@@ -38,7 +36,7 @@ export default function Handler({ params }: { params: { image: string } }) {
             </div>
             <div className="text-xl font-semibold mt-5">
               <a
-                className="text-blue hover:text-mauve"
+                className="text-blue underline"
                 href={"https://csmite.incognitotgt.me/" + params.image}
               >
                 <Flag name="US" /> IncognitoTGT US-EAST Mirror (tg.t)
@@ -49,7 +47,7 @@ export default function Handler({ params }: { params: { image: string } }) {
         <footer className="flex flex-row font-sans justify-center text-2xl text-mauve items-center bottom-5">
           <Link
             href="/smiting/step2"
-            className="underline underline-offset-2 outline-none hover:text-blue"
+            className="underline underline-offset-2 outline-none"
           >
             Continue smiting your device
           </Link>

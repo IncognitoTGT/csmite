@@ -61,14 +61,9 @@ export default function Download() {
           Here, you will find the Cryptosmite images for your Chromebook. These
           images are specific to your Chromebook&apos;s board, not just your
           device.{" "}
-          <div className="font-bold text-text mt-2">
-            <p className="text-red">
-              &nbsp;If your Chromebook is not on the list, your Chromebook is
-              not supported by Cryptosmite. Do not ask for support for your
-              device.
-            </p>
-            &nbsp;If your boardname is grayed out, you have an ARM Chromebook,
-            which isn&apos;t supported right now but will be in the future.
+          <div className="font-bold text-red mt-2">
+            &nbsp;If your Chromebook is not on the list, your Chromebook is not
+            supported by Cryptosmite. Do not ask for support for your device.
           </div>
           <br />
           <div className="flex flex-auto">

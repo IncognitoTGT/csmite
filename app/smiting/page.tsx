@@ -15,7 +15,7 @@ export default function SmiteOne() {
             board, go to chrome://version, and next to &quot;Platform&quot;, in
             the end of that line, you should see your board name. After you got
             your board name,{" "}
-            <Link href="/download" className="text-blue hover:text-mauve">
+            <Link href="/download" className="text-blue">
               download
             </Link>{" "}
             the image for your board, and proceed to the next step.
@@ -32,7 +32,7 @@ export default function SmiteOne() {
         <footer className="flex flex-row font-sans justify-center text-2xl text-mauve items-center bottom-5">
           <Link
             href="/smiting/step2"
-            className="underline underline-offset-2 hover:text-blue outline-none"
+            className="underline underline-offset-2  outline-none"
           >
             Next
           </Link>

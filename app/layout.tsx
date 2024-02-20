@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Providers } from "@/providers";
-import { GeistSans } from "geist/font/sans";
+import { Rubik, Inconsolata } from "next/font/google";
 import { GeistMono } from "geist/font/mono";
 import ThemeSwitch from "./themeSwitch";
 import Link from "next/link";
@@ -27,7 +27,16 @@ export const metadata: Metadata = {
     "darkreader-lock": "",
   },
 };
-
+const rubik = Rubik({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-rubik",
+});
+const inconsolata = Inconsolata({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inconsolata",
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,7 +77,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${GeistSans.variable} ${GeistMono.variable} bg-base selection:bg-surface2/60 overflow-scroll`}
+        className={`${rubik.variable} ${inconsolata.variable} bg-base selection:bg-surface2/60 overflow-scroll`}
       >
         <Providers>
           <ThemeSwitch />
@@ -82,7 +91,7 @@ export default function RootLayout({
                   <Link
                     href={link.href}
                     key={link.href}
-                    className="my-4 hover:text-mauve outline-none md:text-blue mx-2 text-center"
+                    className="my-4 outline-none text-blue mx-2 text-center hover:text-mauve"
                   >
                     {link.icon}
                     {link.text}

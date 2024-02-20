@@ -15,14 +15,14 @@ export default function SmiteTwo() {
           <ChevronLeft className="h-10 w-10 text-text" />
           <Link
             href="/smiting"
-            className="underline underline-offset-2 hover:text-blue outline-none"
+            className="underline underline-offset-2  outline-none"
           >
             Previous
           </Link>
           <div className="mx-5">|</div>
           <Link
             href="/smiting/step3"
-            className="underline underline-offset-2 hover:text-blue outline-none"
+            className="underline underline-offset-2  outline-none"
           >
             Next
           </Link>

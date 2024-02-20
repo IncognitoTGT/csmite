@@ -18,7 +18,7 @@ export default function Home() {
             won&apos;t be able to. Here are some ways to prepare for this new
             unenrollment method:{" "}
             <a
-              className="text-blue hover:text-mauve underline underline-offset-2 outline-none"
+              className="text-blue underline underline-offset-2 outline-none"
               href="https://www.youtube.com/watch?v=9L9qWoDa420"
             >
               CAUB (video)

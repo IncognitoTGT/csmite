@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
-
-const config = {
+import catppuccin from "@catppuccin/tailwindcss";
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -12,16 +12,16 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
+        sans: ["var(--font-rubik)"],
+        mono: ["var(--font-inconsolata)"],
       },
     },
   },
   plugins: [
-    require("@catppuccin/tailwindcss")({
+    catppuccin({
       prefix: false,
     }),
   ],
-} satisfies Config;
+};
 
 export default config;

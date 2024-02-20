@@ -20,7 +20,7 @@ const ThemeSwitch = () => {
   return (
     <button
       value={theme}
-      className="fixed right-2 bottom-2 bg-mantle hover:bg-crust font-sans p-3 rounded-md justify-center h-30 text-text outline-none  flex items-center"
+      className="fixed left-4 bottom-4 z-50 bg-crust font-sans p-3 rounded-md justify-center h-30 text-text outline-none flex items-center cursor-default flex-grow"
       onClick={(e) => {
         if (e.currentTarget.value === "mocha") {
           setTheme("macchiato");

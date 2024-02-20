@@ -20,16 +20,10 @@ export default function FAQ() {
           </h1>
           <Link
             href="/download"
-            className="text-blue hover:text-mauve underline underline-offset-2 outline-none"
+            className="text-blue underline underline-offset-2 outline-none"
           >
             Download
           </Link>
-          <h1 className="text-2xl font-sans font-bold text-mauve">
-            Why is my board grayed out?
-          </h1>
-          You have an ARM device.
-          <br />A built in ChromeOS function does not work on ARM, and support
-          will take a lot of time.
           <h1 className="text-2xl font-sans font-bold text-mauve">
             I&apos;m a panicking sysadmin
           </h1>
