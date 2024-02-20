@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Providers } from "@/providers";
 import { Rubik, Inconsolata } from "next/font/google";
-import { GeistMono } from "geist/font/mono";
 import ThemeSwitch from "./themeSwitch";
 import Link from "next/link";
 import {
