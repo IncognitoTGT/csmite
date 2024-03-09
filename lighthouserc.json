@@ -2,7 +2,7 @@
   "ci": {
     "collect": {
       "url": ["http://localhost:3000"],
-      "startServerCommand": "pnpm run start",
+      "startServerCommand": "pnpm dlx serve ./out",
       "startServerReadyPattern": "   - Local: ",
       "numberOfRuns": 1,
       "isSinglePageApplication": true,
