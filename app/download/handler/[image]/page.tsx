@@ -1,8 +1,16 @@
 import Flag from "./flag";
+import devices from "../../boards.json";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 // Mirrors
 // ALL MIRROR LINKS MUST END WITH A `/`
+//
+export function generateStaticParams() {
+  const board = devices.map((device: { board: string }) => device.board);
+  return board.map((board) => ({
+    image: board,
+  }));
+}
 export default function Handler({ params }: { params: { image: string } }) {
   const mirrors: {
     flag: React.ReactNode;
