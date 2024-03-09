@@ -76,11 +76,11 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${rubik.variable} ${inconsolata.variable} bg-base selection:bg-surface2/60 overflow-scroll`}
+        className={`${rubik.variable} ${inconsolata.variable} bg-base selection:bg-surface2/60 overflow-y-scroll overflow-x-clip`}
       >
         <Providers>
           <ThemeSwitch />
-          <nav className="fixed top-0 p-5 bg-mantle/40 backdrop-blur-3xl w-full md:w-64 md:h-screen flex-grow">
+          <nav className="fixed top-0 p-5 bg-mantle/40 backdrop-blur-3xl w-full md:w-64 md:min-h-screen flex-grow overscroll-none">
             <div className="font-mono font-bold text-text text-3xl pb-4 md:text-left text-center">
               Cryptosmite
             </div>
