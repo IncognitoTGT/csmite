@@ -7,7 +7,8 @@ export default function Home() {
         </div>
         <p className="flex text-lg text-text font-sans justify-center items-center mt-6">
           {/* Insert writeup here */}
-          Writeup is pasted here, please replace
+          Writeup is currently only available to FWSmasher members. Check again
+          later :)
         </p>
       </main>
     </>
